@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonaid Bin Sharif | SEO & AI-Automated Growth Marketer</title>
+<meta name="description" content="Digital Marketer specializing in SEO and AI-generated creative. 3+ years helping US & EU companies and Study Abroad brands grow organic leads.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   TOKENS
+   ============================================ */
+:root{
+  --navy: #0B1F3A;
+  --navy-soft: #142A4D;
+  --white: #FFFFFF;
+  --paper: #F7F9FC;
+  --slate: #475569;
+  --slate-light: #94A3B8;
+  --blue: #2563EB;
+  --blue-deep: #1E40AF;
+  --gold: #C9A227;
+  --line: #E2E8F0;
+
+  --display: 'Fraunces', serif;
+  --body: 'Inter', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+
+  --container: 1180px;
+  --radius: 14px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family: var(--body);
+  color: var(--navy);
+  background: var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+:focus-visible{
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+  background: rgba(37,99,235,0.07);
+  border: 1px solid rgba(37,99,235,0.18);
+  padding: 7px 14px;
+  border-radius: 100px;
+}
+.eyebrow .dot{
+  width:6px;height:6px;border-radius:50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 0 rgba(37,99,235,0.5);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,99,235,0.45);}
+  70%{box-shadow:0 0 0 7px rgba(37,99,235,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,99,235,0);}
+}
+
+.section-tag{
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color: var(--blue-deep);
+  margin-bottom: 14px;
+  display:block;
+}
+
+h1,h2,h3,h4{
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space:nowrap;
+}
+.btn-primary{
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 1px 2px rgba(11,31,58,0.1);
+}
+.btn-primary:hover{
+  background: var(--blue-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(30,64,175,0.28);
+}
+.btn-secondary{
+  background: var(--white);
+  color: var(--navy);
+  border: 1.5px solid var(--line);
+}
+.btn-secondary:hover{
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+.btn-gold{
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-gold:hover{
+  background:#dab337;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(201,162,39,0.35);
+}
+
+.reveal{
+  opacity:0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+header{
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+header.scrolled{
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 0 rgba(11,31,58,0.02);
+}
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 18px 32px;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.logo{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 19px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  letter-spacing:-0.02em;
+}
+.logo-mark{
+  width:30px;height:30px;
+  border-radius:8px;
+  background: var(--navy);
+  color: var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-family: var(--mono);
+  font-size:13px;
+  font-weight:700;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap: 34px;
+}
+.nav-links a{
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--slate);
+  transition: color 0.15s ease;
+  position:relative;
+}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{display:flex;align-items:center;gap:18px;}
+.nav-cta .btn{padding:11px 20px;font-size:14px;}
+
+.menu-toggle{
+  display:none;
+  width:38px;height:38px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+}
+.menu-toggle span{
+  width:20px;height:2px;background:var(--navy);
+  transition: all 0.25s ease;
+}
+.menu-toggle.open span:nth-child(1){transform: translateY(7px) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform: translateY(-7px) rotate(-45deg);}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  padding: 168px 0 100px;
+  background:
+    radial-gradient(800px 420px at 85% -10%, rgba(37,99,235,0.07), transparent 60%),
+    var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items:center;
+}
+.hero-eyebrow{margin-bottom:22px;}
+.hero h1{
+  font-size: clamp(36px, 4.4vw, 58px);
+  margin-bottom: 22px;
+}
+.hero h1 em{
+  font-style:normal;
+  background: linear-gradient(180deg, transparent 62%, rgba(201,162,39,0.35) 62%);
+}
+.hero p.lead{
+  font-size: 17.5px;
+  color: var(--slate);
+  max-width: 480px;
+  margin-bottom: 34px;
+}
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom: 46px;
+}
+.hero-trust{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.stars{color:var(--gold);font-size:15px;letter-spacing:2px;}
+.hero-trust-text{font-size:13.5px;color:var(--slate);}
+.hero-trust-text strong{color:var(--navy);}
+
+/* dashboard mockup */
+.hero-visual{
+  position:relative;
+}
+.dash-card{
+  background: var(--navy);
+  border-radius: 18px;
+  padding: 26px;
+  color: var(--white);
+  box-shadow: 0 30px 60px -20px rgba(11,31,58,0.35);
+  position:relative;
+}
+.dash-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:22px;
+}
+.dash-head-title{
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing:0.06em;
+  color: rgba(255,255,255,0.55);
+  text-transform:uppercase;
+}
+.dash-dots{display:flex;gap:6px;}
+.dash-dots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.25);}
+
+.dash-metric-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.dash-metric{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+}
+.dash-metric .label{
+  font-size:11.5px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom:8px;
+  font-family: var(--mono);
+}
+.dash-metric .value{
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+}
+.dash-metric .up{
+  font-size:12px;
+  color:#4ADE80;
+  font-weight:600;
+}
+
+.dash-chart{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 18px 18px 12px;
+}
+.dash-chart .label{
+  font-size:11.5px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom:14px;
+  font-family: var(--mono);
+}
+.bars{
+  display:flex;
+  align-items:flex-end;
+  gap:7px;
+  height:64px;
+}
+.bars span{
+  flex:1;
+  background: linear-gradient(180deg, var(--gold), #8a6e15);
+  border-radius: 3px 3px 0 0;
+  opacity:0.92;
+}
+.bars span:last-child{background: linear-gradient(180deg, #60A5FA, var(--blue));}
+
+.float-badge{
+  position:absolute;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 16px 32px -8px rgba(11,31,58,0.2);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--navy);
+}
+.float-badge.b1{ top:-22px; right:-14px; }
+.float-badge.b2{ bottom:-20px; left:-22px; }
+.float-badge .ico{
+  width:26px;height:26px;
+  border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  background: rgba(37,99,235,0.1);
+  color: var(--blue-deep);
+  flex-shrink:0;
+}
+
+/* logo strip */
+.trusted{
+  padding: 50px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+.trusted-label{
+  text-align:center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color: var(--slate-light);
+  margin-bottom: 30px;
+}
+.logo-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap: 36px;
+  opacity:0.55;
+}
+.logo-row .lg{
+  font-family: var(--display);
+  font-weight:600;
+  font-size:19px;
+  color: var(--slate);
+}
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+.stats{
+  background: var(--navy);
+  padding: 58px 0;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.stat{
+  text-align:center;
+  padding: 0 12px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat:last-child{border-right:none;}
+.stat .num{
+  font-family: var(--mono);
+  font-size: clamp(28px,3.4vw,40px);
+  font-weight:600;
+  color: var(--white);
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:3px;
+}
+.stat .num .accent{color: var(--gold);}
+.stat .label{
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.6);
+  margin-top:8px;
+}
+
+/* ============================================
+   SERVICES
+   ============================================ */
+.services{padding: 110px 0;}
+.section-head{
+  max-width: 640px;
+  margin-bottom: 58px;
+}
+.section-head h2{font-size: clamp(28px,3.2vw,40px);}
+.section-head p{
+  color: var(--slate);
+  font-size: 16px;
+  margin-top:14px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.svc-card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.svc-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -16px rgba(11,31,58,0.14);
+  border-color: rgba(37,99,235,0.25);
+}
+.svc-icon{
+  width: 44px;height:44px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--white);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom: 20px;
+}
+.svc-card h3{
+  font-size: 18.5px;
+  margin-bottom: 10px;
+}
+.svc-card p{
+  font-size: 14.5px;
+  color: var(--slate);
+}
+
+/* ============================================
+   WORK / CASE STUDIES
+   ============================================ */
+.work{padding: 100px 0; background: var(--paper);}
+.work-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom: 50px;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.work-head h2{font-size: clamp(28px,3.2vw,40px); max-width:560px;}
+
+.work-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.work-grid .case:nth-child(1){grid-column: span 2;}
+
+.case{
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display:flex;
+  flex-direction:column;
+}
+.case:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -18px rgba(11,31,58,0.18);
+}
+.case-thumb{
+  position:relative;
+  aspect-ratio: 16/10;
+  background:
+    linear-gradient(135deg, var(--navy) 0%, var(--blue-deep) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.case-thumb::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15), transparent 55%);
+}
+.case-thumb .ph-icon{
+  color: rgba(255,255,255,0.85);
+  z-index:1;
+}
+.case-result{
+  position:absolute;
+  bottom:14px; left:14px;
+  background: rgba(255,255,255,0.95);
+  color: var(--navy);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 100px;
+  z-index:2;
+}
+.case-body{
+  padding: 22px 24px 26px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.case-tag{
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color: var(--blue-deep);
+  margin-bottom: 10px;
+}
+.case h3{
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.case p{
+  font-size: 14px;
+  color: var(--slate);
+  flex:1;
+}
+.case-link{
+  margin-top: 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.case-link svg{transition: transform 0.2s ease;}
+.case:hover .case-link svg{transform: translateX(4px);}
+
+.work-foot{
+  margin-top: 44px;
+  text-align:center;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials{padding: 110px 0;}
+.t-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.t-card{
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  position:relative;
+}
+.t-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom: 16px;
+}
+.t-stars{color: var(--gold); font-size:14px; letter-spacing:2px;}
+.upwork-badge{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight:600;
+  color: #14A800;
+  background: rgba(20,168,0,0.08);
+  padding: 4px 9px;
+  border-radius: 100px;
+}
+.upwork-badge .dotcheck{
+  width:13px;height:13px;
+  border-radius:50%;
+  background:#14A800;
+  display:flex;align-items:center;justify-content:center;
+}
+.t-quote{
+  font-size: 15px;
+  color: var(--navy);
+  line-height:1.65;
+  margin-bottom: 22px;
+}
+.t-person{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.t-avatar{
+  width:42px;height:42px;
+  border-radius:50%;
+  background: var(--navy);
+  color: var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-family: var(--display);
+  font-weight:600;
+  font-size:15px;
+}
+.t-name{font-size:14px;font-weight:600;}
+.t-role{font-size:12.5px;color: var(--slate);}
+
+/* ============================================
+   LOGO TICKER
+   ============================================ */
+.ticker-section{
+  padding: 70px 0;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.ticker-label{
+  text-align:center;
+  font-family: var(--mono);
+  font-size:12px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color: var(--slate-light);
+  margin-bottom: 32px;
+}
+.ticker-wrap{
+  overflow:hidden;
+  position:relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.ticker-track{
+  display:flex;
+  gap: 56px;
+  width: max-content;
+  animation: scrollLeft 32s linear infinite;
+}
+@keyframes scrollLeft{
+  from{transform: translateX(0);}
+  to{transform: translateX(-50%);}
+}
+.tool-pill{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-family: var(--body);
+  font-weight:600;
+  font-size:15px;
+  color: var(--slate);
+  white-space:nowrap;
+}
+.tool-pill .dot2{
+  width:7px;height:7px;
+  border-radius:50%;
+  background: var(--blue);
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about{padding: 110px 0;}
+.about-grid{
+  display:grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  align-items:center;
+}
+.about-photo{
+  aspect-ratio: 4/5;
+  border-radius: 18px;
+  background: linear-gradient(150deg, var(--navy), var(--blue-deep));
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  padding: 24px;
+}
+.about-photo::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(circle at 70% 20%, rgba(255,255,255,0.18), transparent 50%);
+}
+.about-photo-initials{
+  font-family: var(--display);
+  font-size: 90px;
+  color: rgba(255,255,255,0.15);
+  position:absolute;
+  top:18px; left:20px;
+  font-weight:700;
+}
+.about-photo-tag{
+  position:relative; z-index:1;
+  background: rgba(255,255,255,0.95);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight:600;
+  color: var(--navy);
+}
+.about h2{font-size: clamp(26px,3vw,36px); margin-bottom:18px;}
+.about p.bio{
+  color: var(--slate);
+  font-size:15.5px;
+  margin-bottom: 14px;
+}
+.about-list{
+  margin: 26px 0 30px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.about-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight:500;
+}
+.about-list .check{
+  width:18px;height:18px;
+  border-radius:50%;
+  background: rgba(37,99,235,0.1);
+  color: var(--blue-deep);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  margin-top:1px;
+}
+
+/* ============================================
+   CONTACT / FINAL CTA
+   ============================================ */
+.contact{
+  padding: 110px 0;
+  background: var(--navy);
+  position:relative;
+  overflow:hidden;
+}
+.contact::before{
+  content:"";
+  position:absolute;
+  top:-200px; right:-150px;
+  width:500px;height:500px;
+  background: radial-gradient(circle, rgba(37,99,235,0.25), transparent 65%);
+}
+.contact-inner{
+  position:relative; z-index:1;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items:flex-start;
+}
+.contact-left .section-tag{color: var(--gold);}
+.contact h2{
+  color: var(--white);
+  font-size: clamp(28px,3.4vw,42px);
+  margin-bottom: 18px;
+}
+.contact-left p{
+  color: rgba(255,255,255,0.65);
+  font-size: 15.5px;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+.contact-links{display:flex; flex-direction:column; gap:14px;}
+.contact-link-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color: var(--white);
+  font-size: 14.5px;
+  font-weight:500;
+  padding-bottom:14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: gap 0.2s ease;
+}
+.contact-link-item:hover{gap:18px; color: var(--gold);}
+.contact-link-item .ico{
+  width:36px;height:36px;
+  border-radius:9px;
+  background: rgba(255,255,255,0.08);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+.contact-form{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+.form-row{margin-bottom:18px;}
+.form-row label{
+  display:block;
+  font-size: 12.5px;
+  font-weight:600;
+  color: rgba(255,255,255,0.6);
+  margin-bottom:8px;
+  font-family: var(--mono);
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+}
+.form-row input,
+.form-row select,
+.form-row textarea{
+  width:100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 9px;
+  padding: 13px 14px;
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 14.5px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder{color: rgba(255,255,255,0.35);}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.09);
+  outline:none;
+}
+.form-row select option{background: var(--navy); color:var(--white);}
+.form-row textarea{resize:vertical; min-height:100px;}
+.form-grid-2{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.contact-form .btn{width:100%; margin-top:6px;}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer{
+  padding: 40px 0;
+  background: var(--navy-soft);
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap: 18px;
+}
+.footer-left{display:flex; align-items:center; gap:12px;}
+.footer-left .logo-mark{background: var(--gold); color:var(--navy);}
+.footer-left span{color: rgba(255,255,255,0.5); font-size:13.5px;}
+.footer-social{display:flex; gap:10px;}
+.footer-social a{
+  width:36px;height:36px;
+  border-radius:9px;
+  background: rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:center;
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.footer-social a:hover{background: var(--gold); color:var(--navy);}
+.footer-copy{
+  color: rgba(255,255,255,0.35);
+  font-size: 12.5px;
+  font-family: var(--mono);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1; max-width:440px; margin:0 auto;}
+  .services-grid{grid-template-columns: repeat(2,1fr);}
+  .work-grid{grid-template-columns: repeat(2,1fr);}
+  .work-grid .case:nth-child(1){grid-column: span 2;}
+  .t-grid{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-photo{max-width:340px; margin:0 auto;}
+  .contact-inner{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns: repeat(2,1fr); row-gap:28px;}
+  .stat:nth-child(2){border-right:none;}
+  .stat{border-right:1px solid rgba(255,255,255,0.1);}
+  .stat:nth-child(2n){border-right:none;}
+}
+
+@media (max-width: 720px){
+  .nav-links{display:none;}
+  .menu-toggle{display:flex;}
+  .nav-cta .btn-secondary{display:none;}
+  .hero{padding: 130px 0 70px;}
+  .services-grid{grid-template-columns: 1fr;}
+  .work-grid{grid-template-columns: 1fr;}
+  .work-grid .case:nth-child(1){grid-column: span 1;}
+  .work-head{flex-direction:column; align-items:flex-start;}
+  .form-grid-2{grid-template-columns:1fr;}
+  .about-list{grid-template-columns:1fr;}
+  .logo-row{justify-content:center; gap:24px;}
+  .float-badge{display:none;}
+  .footer-inner{flex-direction:column; text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<header id="header">
+  <nav>
+    <a href="#home" class="logo">
+      <span class="logo-mark">JS</span>
+      Jonaid Bin Sharif
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Case Studies</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-secondary" style="display:none;" id="navSecondary">Resume</a>
+      <a href="#contact" class="btn btn-primary">Book a Call</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal in">
+        <div class="eyebrow hero-eyebrow"><span class="dot"></span> SEO &amp; AI-Automated Growth Marketer</div>
+        <h1>I turn search traffic into <em>enrolled students</em> and qualified leads.</h1>
+        <p class="lead">Digital marketer with 3+ years driving organic growth for US &amp; EU companies — now focused on Study Abroad &amp; Education brands, combining technical SEO with AI-generated creative at scale.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View Case Studies</a>
+          <a href="#contact" class="btn btn-secondary">Book a Free Strategy Call</a>
+        </div>
+        <div class="hero-trust">
+          <span class="stars">★★★★★</span>
+          <span class="hero-trust-text"><strong>5.0 rating</strong> across 40+ Upwork &amp; direct client projects</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal in">
+        <div class="dash-card">
+          <div class="dash-head">
+            <span class="dash-head-title">Organic Performance — Live</span>
+            <div class="dash-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="dash-metric-row">
+            <div class="dash-metric">
+              <div class="label">ORGANIC LEADS</div>
+              <div class="value">+186% <span class="up">↑</span></div>
+            </div>
+            <div class="dash-metric">
+              <div class="label">AVG. SERP RANK</div>
+              <div class="value">#3.2 <span class="up">↑</span></div>
+            </div>
+          </div>
+          <div class="dash-chart">
+            <div class="label">12-WEEK TRAFFIC TREND</div>
+            <div class="bars">
+              <span style="height:30%"></span>
+              <span style="height:42%"></span>
+              <span style="height:38%"></span>
+              <span style="height:55%"></span>
+              <span style="height:50%"></span>
+              <span style="height:68%"></span>
+              <span style="height:74%"></span>
+              <span style="height:64%"></span>
+              <span style="height:82%"></span>
+              <span style="height:90%"></span>
+              <span style="height:85%"></span>
+              <span style="height:100%"></span>
+            </div>
+          </div>
+        </div>
+        <div class="float-badge b1">
+          <span class="ico">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          AI Creative Pipeline Live
+        </div>
+        <div class="float-badge b2">
+          <span class="ico">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 17 5.5 21 7.5 13.5 2 9 9 9"/></svg>
+          </span>
+          5.0 Upwork Rating
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trusted">
+    <div class="container">
+      <div class="trusted-label">Trusted by teams across the US &amp; EU</div>
+      <div class="logo-row">
+        <span class="lg">Northfield Education</span>
+        <span class="lg">Vantage Study Co.</span>
+        <span class="lg">Brightpath Global</span>
+        <span class="lg">Maple&amp;Co.</span>
+        <span class="lg">Horizon Admissions</span>
+        <span class="lg">Lumen Digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     STATS BAR
+     ============================================ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal">
+        <div class="num"><span class="accent">3+</span></div>
+        <div class="label">Years of Experience</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">40<span class="accent">+</span></div>
+        <div class="label">Clients Served (US &amp; EU)</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">186<span class="accent">%</span></div>
+        <div class="label">Avg. Organic Traffic Growth</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num">5.0<span class="accent">★</span></div>
+        <div class="label">Average Client Rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SERVICES
+     ============================================ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">What I Do</span>
+      <h2>Full-funnel marketing, built for measurable growth</h2>
+      <p>From technical SEO foundations to AI-powered creative production — I handle the strategy and the execution, so you get results without managing five different freelancers.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <h3>Technical &amp; Content SEO</h3>
+        <p>Site audits, keyword strategy, on-page optimization, and content systems that compound organic traffic month over month.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <h3>AI-Generated Creative</h3>
+        <p>Scaled ad creative, landing pages, and content variations using AI tools — without sacrificing brand quality or conversion rate.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+        </div>
+        <h3>Study Abroad &amp; Education Marketing</h3>
+        <p>Specialized lead-gen funnels and SEO strategy for education brands — from awareness content to enrollment-ready leads.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <h3>Growth Strategy &amp; Reporting</h3>
+        <p>Clear roadmaps, transparent reporting, and channel strategy tied directly to pipeline and revenue — not vanity metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WORK / CASE STUDIES
+     ============================================ -->
+<section class="work" id="work">
+  <div class="container">
+    <div class="work-head reveal">
+      <h2>Selected case studies</h2>
+      <a href="#contact" class="btn btn-secondary">Start a Project</a>
+    </div>
+    <div class="work-grid">
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <span class="case-result">+212% Leads</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Study Abroad · SEO</span>
+          <h3>Horizon Admissions: Organic Lead Engine</h3>
+          <p>Rebuilt the SEO content architecture and on-page structure for a study-abroad consultancy, driving a 212% increase in qualified organic enrollment leads in 5 months.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <span class="case-result">3.5x Output</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">AI Automation</span>
+          <h3>Vantage Study Co.: AI Creative Pipeline</h3>
+          <p>Designed an AI-assisted creative workflow that scaled ad and landing page variants 3.5x without adding headcount, cutting cost-per-lead by 38%.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <span class="case-result">#2 on Google</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Technical SEO</span>
+          <h3>Northfield Education: Core Web Vitals &amp; Rank Recovery</h3>
+          <p>Diagnosed and fixed Core Web Vitals issues and crawl errors, recovering rankings from page 3 to top-3 positions for 40+ priority keywords.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          </div>
+          <span class="case-result">+94% CTR</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Email + SEO</span>
+          <h3>Brightpath Global: Enrollment Nurture System</h3>
+          <p>Built an SEO-fed email nurture sequence for prospective students, lifting click-through rate by 94% and shortening the enrollment decision cycle.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <span class="case-result">+150% Reach</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Branding · Content</span>
+          <h3>Maple &amp; Co.: Content-Led Brand Relaunch</h3>
+          <p>Repositioned brand messaging and rebuilt the content strategy, growing organic social and search reach by 150% in one quarter.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-thumb">
+          <div class="ph-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <span class="case-result">38% Lower CPL</span>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Paid + Organic</span>
+          <h3>Lumen Digital: Blended Channel Strategy</h3>
+          <p>Aligned paid search with a new SEO content layer to reduce blended cost-per-lead by 38% while improving lead quality scores.</p>
+          <span class="case-link">View Case Study
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Client Reviews</span>
+      <h2>What clients say after working together</h2>
+      <p>Feedback from real engagements across Upwork and direct client relationships.</p>
+    </div>
+    <div class="t-grid">
+
+      <div class="t-card reveal">
+        <div class="t-top">
+          <span class="t-stars">★★★★★</span>
+          <span class="upwork-badge"><span class="dotcheck"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Verified Client</span>
+        </div>
+        <p class="t-quote">"Jonaid rebuilt our entire SEO foundation in under two months. Organic leads for our study abroad programs more than doubled — and he explains everything in plain language, not jargon."</p>
+        <div class="t-person">
+          <div class="t-avatar">SM</div>
+          <div>
+            <div class="t-name">Sarah Mitchell</div>
+            <div class="t-role">Marketing Director, Horizon Admissions (US)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-top">
+          <span class="t-stars">★★★★★</span>
+          <span class="upwork-badge"><span class="dotcheck"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Verified Client</span>
+        </div>
+        <p class="t-quote">"The AI creative pipeline he set up let us launch 3x more ad variants without hiring another designer. Genuinely changed how fast we can test campaigns."</p>
+        <div class="t-person">
+          <div class="t-avatar">DK</div>
+          <div>
+            <div class="t-name">David Klein</div>
+            <div class="t-role">Founder, Vantage Study Co. (DE)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-top">
+          <span class="t-stars">★★★★★</span>
+          <span class="upwork-badge"><span class="dotcheck"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Verified Client</span>
+        </div>
+        <p class="t-quote">"We'd burned through two SEO freelancers before Jonaid. He's the first one who delivered a real strategy, hit every deadline, and showed us the ranking data weekly."</p>
+        <div class="t-person">
+          <div class="t-avatar">EP</div>
+          <div>
+            <div class="t-name">Elena Popescu</div>
+            <div class="t-role">Growth Lead, Northfield Education (UK)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-card reveal">
+        <div class="t-top">
+          <span class="t-stars">★★★★★</span>
+          <span class="upwork-badge"><span class="dotcheck"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Verified Client</span>
+        </div>
+        <p class="t-quote">"Top-tier communication and even better results. Our cost-per-lead dropped almost 40% within the first quarter of working with him."</p>
+        <div class="t-person">
+          <div class="t-avatar">RB</div>
+          <div>
+            <div class="t-name">Ryan Brooks</div>
+            <div class="t-role">CMO, Lumen Digital (US)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TOOLS / TECH TICKER
+     ============================================ -->
+<section class="ticker-section">
+  <div class="ticker-label">Tools &amp; Platforms I Work With</div>
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack">
+      <!-- duplicated via JS for seamless loop -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <span class="about-photo-initials">JS</span>
+        <span class="about-photo-tag">📍 Available for new projects</span>
+      </div>
+      <div class="about-content reveal">
+        <span class="section-tag">About Me</span>
+        <h2>Marketing that's measured in pipeline, not impressions</h2>
+        <p class="bio">I'm Jonaid Bin Sharif, a digital marketer with 3+ years of experience helping companies across the US and EU grow through SEO and AI-driven creative systems. My focus right now is the Study Abroad and Education space, where I combine technical SEO with scalable AI content production to turn search traffic into real enrollments.</p>
+        <p class="bio">I've built my reputation on Upwork and through direct client work by treating every engagement like a long-term growth partnership — clear reporting, honest timelines, and strategy tied to revenue, not vanity metrics.</p>
+        <ul class="about-list">
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Technical &amp; On-Page SEO</li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> AI-Generated Creative Systems</li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Study Abroad &amp; Education Marketing</li>
+          <li><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span> Growth Reporting &amp; Strategy</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2>Let's grow your organic pipeline.</h2>
+        <p>Tell me a bit about your project and goals. I typically reply within 24 hours, and every project starts with a free 20-minute strategy call.</p>
+        <div class="contact-links">
+          <a href="mailto:hello@jonaidsharif.com" class="contact-link-item">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            hello@jonaidsharif.com
+          </a>
+          <a href="#" class="contact-link-item">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+            LinkedIn — /in/jonaidbinsharif
+          </a>
+          <a href="#" class="contact-link-item">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            View Upwork Profile
+          </a>
+          <a href="#" class="contact-link-item">
+            <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            Book via Calendly
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="budget">Project Budget</label>
+          <select id="budget">
+            <option>$1,000 – $2,500</option>
+            <option>$2,500 – $5,000</option>
+            <option>$5,000 – $10,000</option>
+            <option>$10,000+</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Project Details</label>
+          <textarea id="message" placeholder="Tell me about your goals, timeline, and what you're hoping to achieve..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="logo-mark">JS</span>
+        <span>Jonaid Bin Sharif — SEO &amp; AI-Automated Growth Marketing</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+        <a href="#" aria-label="Upwork"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></a>
+      </div>
+      <div class="footer-copy">© 2026 Jonaid Bin Sharif. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================
+// MOBILE MENU
+// ============================================
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  if(window.innerWidth <= 720){
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.left = '0';
+    navLinks.style.right = '0';
+    navLinks.style.background = '#fff';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.padding = '20px 32px';
+    navLinks.style.borderBottom = '1px solid #E2E8F0';
+    navLinks.style.gap = '18px';
+  }
+});
+
+// ============================================
+// HEADER SCROLL STATE
+// ============================================
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ============================================
+// SCROLL REVEAL
+// ============================================
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// ============================================
+// LOGO TICKER — build + duplicate for seamless loop
+// ============================================
+const tools = [
+  "Google Analytics 4", "SEMrush", "Ahrefs", "Google Search Console",
+  "Google Ads", "Meta Ads Manager", "ChatGPT / OpenAI", "Midjourney",
+  "HubSpot", "Mailchimp", "Canva", "Notion", "Google Tag Manager", "Surfer SEO"
+];
+const track = document.getElementById('tickerTrack');
+function buildTicker(){
+  const set = tools.map(t => `<div class="tool-pill"><span class="dot2"></span>${t}</div>`).join('');
+  track.innerHTML = set + set; // duplicate once for seamless marquee
+}
+buildTicker();
+
+// ============================================
+// CONTACT FORM (demo — no backend wired up)
+// ============================================
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  const original = btn.textContent;
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = '#4ADE80';
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.style.background = '';
+    form.reset();
+  }, 2200);
+});
+
+// ============================================
+// SMOOTH ANCHOR SCROLL (offset for fixed header)
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    const id = this.getAttribute('href');
+    if(id.length > 1){
+      const target = document.querySelector(id);
+      if(target){
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        // close mobile menu after click
+        if(window.innerWidth <= 720){
+          navLinks.style.display = 'none';
+          menuToggle.classList.remove('open');
+        }
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
